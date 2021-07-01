@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private MaterialCardView xda, telegram, gitHub;
     private ImageView expandArrow;
     private ImageButton about;
-    private MaterialButton getBitGapps, exitApp;
+    private MaterialButton getBitGapps;
     private LinearLayout buttonHolder, moreInfo, theHitman, paget96;
     private FrameLayout aboutLayout;
     private MaterialCardView infoCard;
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         developer = findViewById(R.id.developer);
 
         getBitGapps = findViewById(R.id.get_bitgapps);
-        exitApp = findViewById(R.id.exit);
         xda = findViewById(R.id.xda);
         telegram = findViewById(R.id.telegram);
         gitHub = findViewById(R.id.github);
@@ -67,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
             gappsPackage.setText(utils.splitString(getLineContent(1), "=", 1));
             version.setText(utils.splitString(getLineContent(4), "=", 1));
 
-            platform.setText(String.format("Platform: %s", utils.splitString(getLineContent(2), "=", 1)));
-            sdk.setText(String.format("SDK: %s", utils.splitString(getLineContent(3), "=", 1)));
-            buildDate.setText(String.format("Build date: %s", utils.splitString(getLineContent(5), "=", 1)));
-            buildId.setText(String.format("Build ID: %s", utils.splitString(getLineContent(6), "=", 1)));
-            developer.setText(String.format("Developer: %s", utils.splitString(getLineContent(7), "=", 1)));
+            platform.setText(utils.splitString(getLineContent(2), "=", 1));
+            sdk.setText(utils.splitString(getLineContent(3), "=", 1));
+            buildDate.setText(utils.splitString(getLineContent(5), "=", 1));
+            buildId.setText(utils.splitString(getLineContent(6), "=", 1));
+            developer.setText(utils.splitString(getLineContent(7), "=", 1));
         } else {
             infoCard.setCardBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.not_installed_bg_color));
             gappsInstallState.setText("BiTGApps Not Installed");
@@ -90,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
         infoCard.setOnClickListener(v -> utils.expandCollapseView(moreInfo, expandArrow));
         getBitGapps.setOnClickListener(v -> utils.openLink(MainActivity.this, "https://bitgapps.github.io"));
-        exitApp.setOnClickListener(v -> finish());
         xda.setOnClickListener(v -> utils.openLink(MainActivity.this, "https://forum.xda-developers.com/android/software/custom-bitgapps-android-t4012165"));
         telegram.setOnClickListener(v -> utils.openLink(MainActivity.this, "https://t.me/bitgapps_official"));
         gitHub.setOnClickListener(v -> utils.openLink(MainActivity.this, "https://github.com/BiTGApps"));

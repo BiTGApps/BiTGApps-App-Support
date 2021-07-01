@@ -24,7 +24,7 @@
         <item name="cardCornerRadius">16dp</item>
         <item name="strokeColor">@color/card_border</item>
         <item name="strokeWidth">1dp</item>
-        <item name="cardBackgroundColor">@color/card_background_color</item>
+        <item name="cardBackgroundColor">@color/background_color</item>
     </style>
 
     <style name="MaterialButton.Light" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">

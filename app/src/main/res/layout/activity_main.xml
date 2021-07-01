@@ -52,25 +52,29 @@
                         android:textStyle="bold"
                         app:autoSizeTextType="uniform" />
 
-                    <TextView
-                        android:id="@+id/gapps_package"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/gapps_package"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:drawablePadding="6dp"
-                        android:gravity="center"
                         android:padding="8dp"
                         android:text="--"
                         app:drawableStartCompat="@drawable/ic_package" />
 
                     <TextView
                         android:id="@+id/version"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="6dp"
-                        android:gravity="center"
                         android:padding="8dp"
                         android:text="--"
                         app:drawableStartCompat="@drawable/ic_version" />
+                    </LinearLayout>
 
                     <ImageView
                         android:id="@+id/expand_arrow"
@@ -81,7 +85,7 @@
 
                     <LinearLayout
                         android:id="@+id/more_info"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="10dp"
@@ -91,33 +95,48 @@
 
                         <TextView
                             android:id="@+id/platform"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Platform:" />
+                            android:padding="4dp"
+                            android:drawablePadding="6dp"
+                            app:drawableStartCompat="@drawable/ic_platform"
+                            android:text="--" />
 
                         <TextView
                             android:id="@+id/sdk"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="SDK:" />
+                            android:padding="4dp"
+                            android:drawablePadding="6dp"
+                            app:drawableStartCompat="@drawable/ic_sdk"
+                            android:text="--" />
 
                         <TextView
                             android:id="@+id/build_date"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Build date:" />
+                            android:padding="4dp"
+                            android:drawablePadding="6dp"
+                            android:text="--"
+                            app:drawableStartCompat="@drawable/ic_calendar" />
 
                         <TextView
                             android:id="@+id/build_id"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Build ID:" />
+                            android:padding="4dp"
+                            android:drawablePadding="6dp"
+                            app:drawableStartCompat="@drawable/ic_build_id"
+                            android:text="--" />
 
                         <TextView
                             android:id="@+id/developer"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Developer:" />
+                            android:padding="4dp"
+                            android:drawablePadding="6dp"
+                            app:drawableStartCompat="@drawable/ic_dev"
+                            android:text="--" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -133,15 +152,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
-                            android:text="Download" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/exit"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="4dp"
-                            android:layout_weight="1"
-                            android:text="Exit" />
+                            android:text="Downloads" />
 
                     </LinearLayout>
                 </LinearLayout>
